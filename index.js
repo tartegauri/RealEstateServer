@@ -47,6 +47,10 @@ app.use("/api/listing", listingRouter);
 //   res.sendFile(path.join(_dirname, "client","dist","index.html"));
 // })
 
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
 //middleware
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
