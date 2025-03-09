@@ -28,8 +28,10 @@ app.use(cookieParser());
 
 // Use CORS middleware
 app.use(cors({
-  origin:[ "http://localhost:5173", "https://real-estate-client-sigma.vercel.app/"], // Allow requests from frontend (change this to your frontend's URL)
-  credentials: true,                // Allow cookies
+  origin: ["http://localhost:5173", "https://real-estate-client-sigma.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
 }));
 
 
