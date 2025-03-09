@@ -34,7 +34,7 @@ app.use(cors({
 
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log("server is running on port 3000!");
+  console.log("server is running on port 5000");
 });
 // api routes
 
@@ -42,10 +42,10 @@ app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/listing", listingRouter);
 
-app.use(express.static(path.join(_dirname, "/client/dist")));
-app.get("*",(req,res)=>{
-  res.sendFile(path.join(_dirname, "client","dist","index.html"));
-})
+//app.use(express.static(path.join(_dirname, "/client/dist")));
+// app.get("*",(req,res)=>{
+//   res.sendFile(path.join(_dirname, "client","dist","index.html"));
+// })
 
 //middleware
 app.use((err, req, res, next) => {
