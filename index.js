@@ -28,11 +28,12 @@ app.use(cookieParser());
 
 // Use CORS middleware
 app.use(cors({
-  origin: ["http://localhost:5173", "https://real-estate-client-sigma.vercel.app"],
+  origin: ["http://localhost:5173", "https://real-estate-client-git-main-gauri-tartes-projects.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
 }));
+
 
 
 app.listen(process.env.PORT || 5000, () => {
